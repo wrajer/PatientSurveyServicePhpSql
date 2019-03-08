@@ -4,12 +4,12 @@ session_start(); //start sesji, dołacznie do istniejacej sesji
 //sprawdzenie czy zalogowany
 if(!isset($_SESSION['zalogowany']))
 	{
-		header('Location:index.php'); 
+		header('Location:../index.php'); 
 		exit(); //to wazne bo inaczej cała reszta kody była by wykonywana a tak to odrazu do gry o ile jest sesja otwarta
 	}
 	
 if($_SESSION['admin']==false)	{	
-	header('Location:panel.php'); 		
+	header('Location:../panel.php'); 		
 	exit(); 
 	}
 	

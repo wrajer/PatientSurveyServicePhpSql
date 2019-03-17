@@ -4,15 +4,15 @@ session_start(); //start sesji, dołacznie do istniejacej sesji
 //sprawdzenie czy zalogowany
 if(!isset($_SESSION['zalogowany']))
 	{
-		header('Location:../index.php');
+		header('Location:index.php');
 		exit(); //to wazne bo inaczej cała reszta kody była by wykonywana a tak to odrazu do gry o ile jest sesja otwarta
 	}
 
 if($_SESSION['admin']==false)	{
-	header('Location:../index.php');
+	header('Location:index.php');
 	exit();
 	}
-require_once"../controllers/connect.php"; //lacznie sie z serwerem
+require_once"controllers/connect.php"; //lacznie sie z serwerem
 
  try
  {
@@ -36,7 +36,7 @@ require_once"../controllers/connect.php"; //lacznie sie z serwerem
 <html lang="pl">
 <head>
 <title>Obecny stan bazy danych pacjentów</title>
-<link rel="stylesheet"  href="../bootstrap.min.css"  type="text/css" >
+<link rel="stylesheet"  href="bootstrap.min.css"  type="text/css" >
 </head>
 <body >
 <div class="container">
@@ -77,12 +77,12 @@ require_once"../controllers/connect.php"; //lacznie sie z serwerem
 
 		<table align="center" width="368">
 		  <tr >
-			<td align="center" height="55"><a href="formularz.php"><button class="btn success">Dodaj dane pacjenta</button></a></td>
-			<td align="center"><a href="../controllers/logout.php"><button class="btn warning" >Wyloguj się</button></a></td>
+			<td align="center" height="55"><a href="pages/formularz.php"><button class="btn success">Dodaj dane pacjenta</button></a></td>
+			<td align="center"><a href="controllers/logout.php"><button class="btn warning" >Wyloguj się</button></a></td>
 		  </tr>
 		  <tr>
-			<td align="center"><a href="uzytkownicyadd.php"><button class="btn info">Dodaj użtkownika</button></a></td>
-			<td align="center"><a href="../controllers/exportdb.php"><button class="btn danger">Baza danych</button></a></td>
+			<td align="center"><a href="pages/uzytkownicyadd.php"><button class="btn info">Dodaj użtkownika</button></a></td>
+			<td align="center"><a href="controllers/exportdb.php"><button class="btn danger">Baza danych</button></a></td>
 		  </tr>
 		</table>
 

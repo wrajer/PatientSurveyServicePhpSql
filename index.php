@@ -22,7 +22,7 @@ if(isset($_SESSION['zalogowany'])&&($_SESSION['zalogowany']==true ) )
 
 		<div class="container">
 			<img src="images/logo-tarcza-nazwa-en_samo_logo.png" />
-			<form action = "zaloguj.php" method="post" >
+			<form action = "controllers/zaloguj.php" method="post" >
 
 				<div class="font-input">
 					<input type="text" name="login" placeholder="Wprowadź login">
